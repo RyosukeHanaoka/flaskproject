@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>フォーム画面</title>
+</head>
+<body>
+<h2>入力フォーム</h2>
+<form action="/submit_form1" method="post">
+  <label>性別を教えてください:</label>
+  <input type="radio" name="sex" value="0" required>男性
+  <input type="radio" name="sex" value="1" required>女性<br>
+
+  <label for="birth_year">生年月日:</label>
+  <select name="birth_year" id="birth_year" required>
+    {% for year in years %}
+    <option value="{{ year }}">{{ year }}</option>
+    {% endfor %}
+  </select>
+  <select name="birth_month" id="birth_month" required>
+    {% for month in months %}
+    <option value="{{ month }}">{{ month }}</option>
+    {% endfor %}
+  </select>
+  <select name="birth_day" id="birth_day" required>
+    {% for day in days %}
+    <option value="{{ day }}">{{ day }}</option>
+    {% endfor %}
+  </select><br>
+
+  <label for="onset_year">発症年月日:</label>
+  <select name="onset_year" id="onset_year" required>
+    <option value="不明">わからない</option>
+    {% for year in years %}
+    <option value="{{ year }}">{{ year }}</option>
+    {% endfor %}
+  </select>
+  <select name="onset_month" id="onset_month" required>
+    <option value="不明">わからない</option>
+    {% for month in months %}
+    <option value="{{ month }}">{{ month }}</option>
+    {% endfor %}
+  </select>
+  <select name="onset_day" id="onset_day" required>
+    <option value="不明">わからない</option>
+    <option value="上旬">上旬</option>
+    <option value="中旬">中旬</option>
+    <option value="下旬">下旬</option>
+    {% for day in days %}
+    <option value="{{ day }}">{{ day }}</option>
+    {% endfor %}
+  </select><br>
+
+  <label>朝のこわばりの有無:</label>
+  <input type="radio" name="morning_stiffness" value="あり" required>あり
+  <input type="radio" name="morning_stiffness" value="ない" required>ない<br>
+
+  <label for="stiffness_duration">朝のこわばりの持続時間:</label>
+  <select name="stiffness_duration" id="stiffness_duration" required>
+    <!-- オプションはFlaskで定義 -->
+    {% for duration in stiffness_durations %}
+    <option value="{{ duration }}">{{ duration }}</option>
+    {% endfor %}
+  </select><br>
+
+  <label for="pain_level">痛みの程度 (0-100):</label>
+  <select name="pain_level" id="pain_level" required>
+    {% for level in range(101) %}
+    <option value="{{ level }}">{{ level }}</option>
+    {% endfor %}
+  </select><br>
+
+  <button type="submit">次へすすむ</button>
+</form>
+
+<button onclick="location.href='informed_consent.html'">前へもどる</button>
+</body>
+</html>
+

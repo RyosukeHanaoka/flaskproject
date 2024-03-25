@@ -1,0 +1,89 @@
+/* リセットCSSの補足スタイル */
+ul, ol, li, h1, h2, h3, h4, h5, h6, p, img {
+    margin: 0;
+    padding: 0;
+}
+
+/* ベースとなるスタイリング */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    padding-top: 0px; /* ヘッダーの高さ分の上部スペースを確保 */
+}
+
+/* ヘッダー画像のスタイリング */
+.header-container {
+    background: url('pixta_57668553_XL.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 300px; /* ヘッダーの高さをここで調整 */
+}
+
+.header-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: white;
+    font-size: 5.0em;
+    font-family:'Times', Courier, monospace
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 読みやすさのためのテキストシャドウ */
+}
+
+/* コンテンツスタイル */
+.content {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin: -50px auto 20px auto; /* 上のマージンを負の値にしてヘッダーに重ねる */
+    padding: 40px;
+    max-width: 800px; /* 適宜調整 */
+}
+
+h2 {
+    color: #005a9c;
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* ナビゲーションリンク - 診断を始めるボタンのスタイル */
+a {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+/* お問い合わせ情報のスタイル */
+adress {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+    display: block; /* インライン要素から変更 */
+    margin-top: 20px;
+}
+
+

@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h2, p {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+.navigation-buttons {
+    margin-top: 20px;
+}
+
+.navigation-buttons button {
+    margin-right: 10px;
+}
+#imageContainer {
+    position: relative;
+    width: 100%; /* または画像の幅に合わせます */
+    height: 600px; /* 画像の高さに合わせます */
+    background-image: url('distribution.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.checkbox {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
