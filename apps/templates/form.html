@@ -2,14 +2,13 @@
 <html>
 <head>
             <title>My Page</title>
-            <link rel="stylesheet" type="text/css" href="styles.css">
+            <link rel="stylesheet" href="{{ url_for('static', filename='CRUD/style1.css') }}">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
-<img src="pixta_57668553_XL.jpg" alt="イメージ図" width="30%" height="30%">
 <body>
 <div class="header">
-<h1>同意書</h1>
-以下の内容をよく読み、同意する場合は「同意する」ボタンを押してください。
+<h2>同意書</h2>
+<p>以下の内容をよく読み、同意する場合は「同意する」ボタンを押してください。</p>
 <div class="inline_box">
 この研究は研究の趣旨をじゅうぶんに理解していただいた上でご自身の自由意志によって同意を得られる20歳以上の男女を対象としています。<br>
 メールアドレスを登録することで、研究に参加することになります。<br>
@@ -21,7 +20,7 @@
 これらの情報は、研究目的のために使用されますが、その際には細心の注意を払って匿名化します。<br>
 外部に個人情報が漏洩することはありません。<br>
 </div>
-同意される方は、以下のボタンを押してください。
+<p>同意される方は、以下のボタンを押してください。</p>
 <form action="index.php" method="post">
             <input type="submit" value="同意する">
 </body>
