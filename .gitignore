@@ -1,0 +1,12 @@
+# Python 仮想環境
+venv/
+
+# macOS のシステムファイル
+.DS_Store
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
